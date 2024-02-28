@@ -1,0 +1,14 @@
+.pers {
+
+    padding-right: 15px;
+    border: 1px solid black;
+}
+.alternate-row:nth-child(2n - 1) {
+
+    background-color: gainsboro;
+}
+
+.alternate-row:nth-child(2n) {
+
+    background-color: whitesmoke;
+}
