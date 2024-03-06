@@ -1,3 +1,6 @@
+
+<app-test></app-test>
+
 <h2 [style.color] = "color" [style.background-color] = "bg_color">{{title}}</h2>
 
 <table>
@@ -23,32 +26,4 @@
 </table>
 
 <h2 [style.color] = "color" [style.background-color] = "bg_color">Persone</h2>
-<table class="bordered">
-  <tr *ngFor="let person of persons; index as i" class="alternate-row">
-    <td class="pers">{{person.name}}</td> 
-    <td class="pers">{{person.surname}}</td> 
-    <td class="pers">{{person.age}} anni</td>
-    <td><button (click)="edit(i)">Modifica</button></td>
-    <td><button (click)="delete(i)">Elimina</button></td>
-  </tr>
-</table>
-
-<br />
-
-<table>
-  <tr>
-    <td>Nome Persona: </td>
-    <td><input type="text" [(ngModel)]="p.name"/>
-  </tr>
-  <tr>
-    <td>Cognome Persona: </td>
-    <td><input type="text" [(ngModel)]="p.surname"/>
-  </tr>
-  <tr>
-    <td>Età Persona: </td>
-    <td><input type="number" [(ngModel)]="p.age"/>
-  </tr>
-  <tr *ngIf="edit_index == -1"><td><button (click)="add_person()">{{add_button_text}}</button></td></tr>
-  <tr *ngIf="edit_index != -1"><td><button (click)="edit_person()">{{add_button_text}}</button></td></tr>
-</table>
-
+<app-table></app-table>
